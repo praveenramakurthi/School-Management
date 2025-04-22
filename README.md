@@ -1,15 +1,15 @@
 # School-Management
 
-# 🏫 School Management API
+# School Management API
 
 A RESTful API built with **Node.js**, **Express.js**, and **MySQL** to manage school data. It allows users to:
 
 - Add new schools with location info
 - Retrieve a list of schools sorted by proximity to a user's location
 
----
+-------------------
 
-## 📦 Features
+## Features
 
 - Add new school records
 - List all schools sorted by distance (from user-provided coordinates)
@@ -17,11 +17,9 @@ A RESTful API built with **Node.js**, **Express.js**, and **MySQL** to manage sc
 - Distance calculation using Euclidean method (basic proximity)
 - MySQL integration
 
----
+-------------
 
-## 🚀 Live API
-
-> 📍 Deployed on Render
+## Postman API
 
 - **Add School**: `POST /addSchool`
 - **List Schools by Proximity**: `GET /listSchools?latitude=LAT&longitude=LON`
@@ -29,9 +27,7 @@ A RESTful API built with **Node.js**, **Express.js**, and **MySQL** to manage sc
 _Replace `LAT` and `LON` with actual values._
 
 Example:
-
-```bash
-GET https://your-api.onrender.com/listSchools?latitude=12.9716&longitude=77.5946
+GET http://localhost:3000/listSchools?latitude=13.9716&longitude=77.594
 -----------------------------------------------------------------------------------------------
 POST /addSchool
 
@@ -45,11 +41,17 @@ Edit
   "latitude": 12.9352,
   "longitude": 77.6141
 }
+------------------------------
+**response**
+{
+    "message": "School added successfully",
+    "schoolId": 3
+}
 
-📍 List Schools by Proximity
-GET /listSchools?latitude=12.9716&longitude=77.5946
+**List Schools by Proximity
+**GET /listSchools?latitude=12.9716&longitude=77.5946
 --------------------------------------------------------------------------------------------------
-Response:
+**Response**:
 json
 Copy
 Edit
@@ -64,6 +66,7 @@ Edit
   },
   ...
 ]
+
 
 -------------------------------------------------------------------------------------------------
 1. Clone the Repo
